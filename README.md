@@ -21,6 +21,11 @@ You only need the release zip — no compiler and no separate Linux build.
    That opens the game folder (the one containing `GraveyardOrbit.exe`).
 3. Download the release zip:
    **[GraveyardOrbit-RerollQuotas-0.1.0.zip](https://github.com/Grokent/graveyard_orbit_reroll_quotas/releases/latest/download/GraveyardOrbit-RerollQuotas-0.1.0.zip)**
+
+   The same file is mirrored in the repository file list at
+   [`dist/GraveyardOrbit-RerollQuotas-0.1.0.zip`](dist/GraveyardOrbit-RerollQuotas-0.1.0.zip)
+   with a checksum in [`dist/SHA256SUMS.txt`](dist/SHA256SUMS.txt).
+
 4. Extract **everything** from the zip into the game folder that opened in step 2.
    It only adds files (`winhttp.dll`, `doorstop_config.ini`,
    `.doorstop_version`, `changelog.txt`, `BepInEx/`); nothing in the original

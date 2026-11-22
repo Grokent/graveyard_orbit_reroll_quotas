@@ -64,13 +64,15 @@ and `QuotasScreen.DevRefresh()` rebuilds the cards + cash label after a reroll.
 ./setup.sh     # portable .NET 9 SDK + BepInEx compile refs (project-local)
 ./build.sh
 ./deploy.sh    # -> BepInEx/plugins/GraveyardOrbit.Quotas/
-./package.sh   # release/GraveyardOrbit-RerollQuotas-0.1.0.zip (gitignored; release asset)
+./package.sh   # release/GraveyardOrbit-RerollQuotas-0.1.0.zip (gitignored build output)
 ```
 
 - `build.sh` prefers `tools/dotnet`, then the Tweaks/co-op project's portable
   SDK, then `dotnet` on PATH.
 - No dependency on the co-op or tweaks plugins; no shared state.
-- Install zips are GitHub release assets, never committed.
+- Each release zip is attached to GitHub Releases and also mirrored in
+  `dist/` (with `dist/SHA256SUMS.txt`) so it is visible in the repository file
+  listing. Keep the two copies identical.
 
 ## Gotchas
 
@@ -111,7 +113,7 @@ and `QuotasScreen.DevRefresh()` rebuilds the cards + cash label after a reroll.
 
 - Keep patches defensive (try/catch, no exceptions into gameplay).
 - Bump `QuotasPlugin.PluginVersion` when shipping.
-- Commit/push to the repo when asked; keep `dist/`, `release/`, `tools/`,
-  `bin/obj` gitignored.
+- Commit/push to the repo when asked; keep `release/`, `tools/`, `bin/obj`
+  gitignored. `dist/` is deliberately tracked.
 - README/INSTALL must carry the AI-use disclaimer (100% vibe coded, no
   ownership claims, rights to Anchorhead Games).
